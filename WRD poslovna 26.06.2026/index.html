@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Studenti</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h2>Dodavanje studenta</h2>
+
+      <div class="form-group">
+        <label>Ime</label>
+        <input type="text" id="firstName" />
+      </div>
+
+      <div class="form-group">
+        <label>Prezime</label>
+        <input type="text" id="lastName" />
+      </div>
+
+      <div class="form-group">
+        <label>Prosjek</label>
+        <input type="number" id="average" step="0.01" />
+      </div>
+
+      <div class="form-group">
+        <label>Smjer</label>
+        <select id="majorId">
+          <option value="">Odaberite smjer</option>
+        </select>
+      </div>
+
+      <button onclick="AddStudent()">Dodaj studenta</button>
+
+      <hr />
+
+      <button onclick="LoadAllStudents()">Učitaj studente</button>
+
+      <div class="search-box">
+        <input type="text" id="searchName"
+               placeholder="Pretraga po imenu" />
+        <button onclick="SearchStudents()">Pretraži</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Prosjek</th>
+            <th>Naziv smjera</th>
+          </tr>
+        </thead>
+
+        <tbody id="studentTableBody"></tbody>
+
+      </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
